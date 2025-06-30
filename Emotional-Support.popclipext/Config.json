@@ -1,0 +1,52 @@
+{
+  "name": "Emotional Support",
+  "icon": "icon.svg",
+  "identifier": "tw.hydai.popclip.extension.emotional-support",
+  "description": "Transform text into emotionally supportive messages filled with love and encouragement. Hold Shift (⇧) to copy the supportive message instead of replacing the original text.",
+  "note": "To use this extension you will need access to an OpenAI compatible LLM API service, such as <a href='https://platform.openai.com/docs/overview'>OpenAI</a>",
+  "app": {
+    "name": "Emotional Support",
+    "link": "https://github.com/hydai/Emotional-Support-PopClip-Extension"
+  },
+  "popclipVersion": 4069,
+  "module": "translation.js",
+  "entitlements": [
+    "network"
+  ],
+  "options": [
+    {
+      "identifier": "endpoint",
+      "label": "API Endpoint",
+      "type": "string",
+      "description": "The OpenAI compatible API endpoint to use",
+      "default value": "https://api.openai.com/v1"
+    },
+    {
+      "identifier": "modelname",
+      "label": "Model Name",
+      "type": "string",
+      "description": "The model name",
+      "default value": "gpt-4o-mini"
+    },
+    {
+      "identifier": "apikey",
+      "label": "API Key",
+      "type": "secret",
+      "description": "API key for authentication."
+    },
+    {
+      "identifier": "tone",
+      "label": "Support Tone",
+      "type": "string",
+      "description": "The tone of emotional support (e.g. Warm, Encouraging, Compassionate)",
+      "default value": "Warm and Encouraging"
+    },
+    {
+      "identifier": "prompt",
+      "label": "Support Prompt",
+      "type": "string",
+      "description": "Custom prompt for generating emotionally supportive messages",
+      "default value": "You are a caring and compassionate friend. Transform the following text into an emotionally supportive message that spreads love and positivity. Keep the core meaning but add warmth, encouragement, and emotional support. Use a {tone} tone. IMPORTANT: You MUST respond in the SAME LANGUAGE as the input text. Here's the text to transform:"
+    }
+  ]
+}
